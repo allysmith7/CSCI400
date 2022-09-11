@@ -13,9 +13,9 @@ let rec lasthalf = fun (x,n) -> (match (x,n) with
   | ([],_) -> x
   | (_::more, _) -> lasthalf (more, n-1)
 ) in 
-let split = fun (x, f) -> (
+let split = fun x -> (
   let n = (len x)/2 in (* number of elements to keep/remove*)
-  (f(firsthalf(x, n)), f(lasthalf(x,n)))
+  (firsthalf(x, n), lasthalf(x,n))
 ) in
 
 let rec merge = fun (a,b) -> (match (a,b) with
@@ -28,11 +28,11 @@ let rec merge = fun (a,b) -> (match (a,b) with
 ) in
 let rec sort = fun list -> (match list with
   | [] -> []
-  | [a] -> list
-  | [a;b] -> (match a < b with
-              | true -> [a;b]
-              | false -> [b;a]
-              )
-  | l -> merge(split(list, sort))
+  | [_] -> list
+  | _ -> let (left, right) = split(list) in
+          let leftsort = sort(left) in
+          let rightsort = sort(right) in
+          merge(leftsort, rightsort)
 ) in
-sort [3;2;4;5;1]
+let _ = sort [3;2;4;5;1] in
+sort [5;1]
