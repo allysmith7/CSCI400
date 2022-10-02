@@ -7,3 +7,6 @@
 [submodule "HW03"]
 	path = HW03
 	url = git@github.com:mines-csci400/f22-user-cksmith-hw03.git
+[submodule "Labs"]
+	path = Labs
+	url = git@github.com:mines-csci400/f22-team-AllyKat.git

@@ -4,7 +4,12 @@
 			"path": "."
 		}
     ],
-	"settings": {},
+	"settings": {
+		"ocaml.sandbox": {
+			"kind": "opam",
+			"switch": "default"
+		}
+	},
 	"extensions": {
 		"recommendations": [
 			"ocamllabs.ocaml-platform"
