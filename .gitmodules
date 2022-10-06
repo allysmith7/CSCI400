@@ -10,3 +10,6 @@
 [submodule "Labs"]
 	path = GroupLabs
 	url = git@github.com:mines-csci400/f22-team-AllyKat.git
+[submodule "HW04"]
+	path = HW04
+	url = git@github.com:mines-csci400/f22-assignment-hw04.git
