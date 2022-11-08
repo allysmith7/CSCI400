@@ -16,3 +16,6 @@
 [submodule "HW05"]
 	path = HW05
 	url = git@github.com:mines-csci400/f22-user-cksmith-hw05.git
+[submodule "HW06"]
+	path = HW06
+	url = git@github.com:mines-csci400/f22-user-cksmith-hw06.git
